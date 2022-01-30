@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Sebastian Oquendo -->
+    <!-- SE111.02 -->
+    <!-- 01-27-22 -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +12,70 @@
     <meta name="author" content="Sebastian Oquendo">
     
     <title>W2 Bio Home</title>
+
+    <style>
+
+        div {
+            border:1px solid black;
+            padding:10px; /*top, right, bottom, left*/
+            margin:5px; /*top, right, bottom, left*/
+        
+        
+        }
+
+        body {
+            background-color: white;
+        }
+
+        #wrapper {
+            width:900px;
+            margin:auto;
+        
+        }
+
+        .border {
+            border:1px solid blue;
+            margin-bottom:10px;
+
+    
+    }
+
+    #nav {
+        border:1px solid red;
+        text-align:center;
+    }
+
+    .bg-main {
+        background-color:white;
+
+    }
+
+    .link {
+        font-size:26px;
+        width:150px;
+        text-decoration:none;
+        margin-right:15px;
+        background-color: black;
+        color:white;
+    
+    }
+
+    .link:hover {
+        background-color:white;
+        color:blue;
+
+    }
+
+    .link:visited {
+        color:rgb(204, 2, 255);
+    }
+
+    </style>
+
+
 </head>
 <body>
-    <main>
+    <div id="wrapper" style=background-color:white;>
         <header id="header">
             <h1><i>Sebastian Oquendo</i></h1>>
         </header>
@@ -22,21 +87,34 @@
         <div style="border:2px solid red;">
         <section id=bio>
             <h2>Bio</h2>
-            <p style="color: rgb(0, 0, 70);">Born and raised in Rhode Island, I grew up in Pawtucket and Lincoln where my only concerns were baseball, soccer, video games and music. Frequent childhood trips to Queens, NY to visit family would eventually influence the decision to attend audio school in Manhattan, which in turn led to finding work at the Javits Center as part of Teamsters Local 807. Hobbies include photography, videography and graphic design; as well as recording and mixing music. A naturally curious person, I like to think I know a moderate amount across a broad range of different topics. Jack of all trades, master of none.</p>
+            <!-- Bio section will include at minimum: One paragraph biography within  <p></p> tags and one image -->
+            <p style="color: rgb(0, 0, 70);">   Born and raised in <em>Rhode Island</em>, I grew up in Pawtucket and Lincoln where my only concerns were baseball, soccer, video games and music. Frequent childhood trips to Queens, NY to visit family would eventually influence the decision to attend audio school in Manhattan, which in turn led to finding work at the Javits Center as part of Teamsters Local 807. Hobbies include photography, videography and graphic design; as well as recording and mixing music. A naturally curious person, I like to think I know a moderate amount across a broad range of different topics. <i>Jack of all trades, master of none.</i></p>
             <br>
             <img src="images\main images\IMG_9404.JPG" alt="wide pic" style="width:520px">
         </section></div>
         <hr>
-        <section id=school>
+        <section id="school">
             <h2>Schooling</h2>
-            <br>
-            <img src="images\people\mrt.webp" alt="Mr T" alt="Lucky the Leprechaun">
+            <!-- Schooling section must include at least three schools and utilize a Ordered (Numbered) List -->
+            <ol>
+                <li><b>Lincoln High School</b></li>
+                <li><b>Institute of Audio Research</b></li>
+                <li><b><a href="https://www.neit.edu/">New England Institue of Technology</a></b></li>
+                <br>
+                </ol>
         </section>
         <hr>
-        <section id=hobbies>
+        <section id="hobbies">
             <h2>Hobbies</h2>
+            <!-- Hobbies section must include at least three interests and utilize a Unordered (Bulleted) List and one image -->
+            <ul>
+                <li><strong>Photography/videography</strong></li>
+                <li><strong>Video Games</strong></li>
+                <li><strong>Music</strong></li>
+                <br>
+            </ul>
             <br>
-            <img src="images\people\mrt.webp" alt="Mr T" alt="Lucky the Leprechaun">
+            <img src="images\main images\IMG_3034.JPG" alt="subway platform" style="width:360px">
         </section>
         <hr>
         <footer id="footer">
