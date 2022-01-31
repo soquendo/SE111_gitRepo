@@ -13,15 +13,15 @@
         /*we write CSS in here*/
 
         div {/*applies to every div in the page*/
-            border:1px solid black;
+            border:1px solid red;
             padding:10px; /*top, right, bottom, left*/
             margin:5px; /*top, right, bottom, left*/
-        
-        
+
         }
 
         body {
-            background-color: grey;
+            color: white;
+            background-color: black;
         }
 
         #wrapper {/*this applies only to the element with the ID of "wrapper"*/
@@ -31,19 +31,31 @@
         }
 
         .border {/*. denotes a class; all elements with a class of "border"*/
-            border:1px solid blue;
+            border:1px solid white;
             margin-bottom:10px;/*can apply side specifications of -top, -right, -bottom, -left to: border, padding, margin*/
 
-    
     }
+    
 
     #nav {
-        border:1px solid red;
+        border:1px solid rgb(255, 233, 32);
         text-align:center;
     }
 
+    #footer {
+        /*width: 90%;
+        background-image: url(images\avalon.jpg);
+        background-size: 95% 95%;
+        margin:auto;
+        DID NOT WORK FOR ME :( 
+        */
+
+    }
+
     .bg-main {
-        background-color:white;
+        color: rgb(255, 233, 32);
+        border:2px dotted red;
+    
 
     }
 
@@ -59,13 +71,13 @@
 
     .link:hover {
         background-color:white;
-        color:black;
+        color:red;
 
     }
 
     .link:visited {
-        background-color: blueviolet;
-        color:red;
+        background-color: black;
+        color:blue;
     }
 
     </style>
@@ -80,7 +92,7 @@
         <!--header - is content that loads first/ at top of the page-->
         <div id="header" class="border bg-main">
 
-                <h1>ABOUT</h1>
+                <h1><i>Sebastian Oquendo: Jack of All Trades</i></h1>
 
         </div><!--/ #header -->
 
@@ -97,13 +109,13 @@
         <!--content - holds the main content of page; this is where stuff usually changes from page to page-->
         <div id="content" class="border">
 
-            <p>random filler</p>
+            <p>Born and raised in Rhode Island, I grew up in Pawtucket and Lincoln where my only concerns were baseball, soccer, video games and music. Frequent childhood trips to Queens, NY to visit family would eventually influence the decision to attend audio school in Manhattan, which in turn led to finding work at the Javits Center as part of Teamsters Local 807. Hobbies include photography, videography and graphic design; as well as recording and mixing music. A naturally curious person, I like to think I know a moderate amount across a broad range of different topics. <i>Jack of all trades, master of none</i>.</p>
 
         </div><!--/ #content-->
 
         <!-- footer - final section of page-->
         <div id="footer" class="border bg-main">
-
+            
             <a href="#">Back to top</a>
 
             <p>&copy; 2022, S OQUENDO | SE111.02</p>
