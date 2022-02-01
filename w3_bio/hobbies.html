@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="S Oquendo">
+    <meta name="description" content="W3 Bio">
+    <title>Hobbies</title>
+
+    <!--in-document styling below-->
+    <style>
+        /*we write CSS in here*/
+
+        div {/*applies to every div in the page*/
+            border:1px solid red;
+            padding:10px; /*top, right, bottom, left*/
+            margin:5px; /*top, right, bottom, left*/
+
+        }
+
+        body {
+            color: white;
+            background-color: black;
+        }
+
+        #wrapper {/*this applies only to the element with the ID of "wrapper"*/
+            width:900px;
+            margin:auto; /*adds equal space to left & right sides only*/
+        
+        }
+
+        .border {/*. denotes a class; all elements with a class of "border"*/
+            border:1px solid white;
+            margin-bottom:10px;/*can apply side specifications of -top, -right, -bottom, -left to: border, padding, margin*/
+
+    }
+    
+
+    #nav {
+        border:1px solid rgb(255, 233, 32);
+        text-align:center;
+    }
+
+    /*#footer {
+        width: 100%;
+        background-image: url(images\avalon.jpg);
+        background-size: 95% 95%;
+        margin:auto;
+        DID NOT WORK FOR ME :( 
+        
+
+    }*/
+
+    .bg-main {
+        color: rgb(255, 233, 32);
+        border:2px dotted red;
+    
+
+    }
+
+    .link {
+        font-size:24px;
+        width:150px;
+        text-decoration:none;
+        margin-right:15px;
+        background-color: black;
+        color:white;
+    
+    }
+
+    .link:hover {
+        background-color:white;
+        color:red;
+
+    }
+
+    .link:visited {
+        background-color: black;
+        color:blue;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- wrapper/container - holds the entire page content -->
+    <div id="wrapper" class="border">
+
+        <!--header - is content that loads first/ at top of the page-->
+        <div id="header" class="border bg-main">
+
+                <h1><i>Sebastian Oquendo</i></h1>
+
+        </div><!--/ #header -->
+
+        <!--- nav - holds links to internal pages -->
+        <div id="nav" class="border">
+
+            <a href="index.html" class="link">HOME</a>
+            <a href="about.html" class="link">ABOUT</a>
+            <a href="schools.html" class="link">SCHOOLS</a>
+            <a href="hobbies.html" class="link">HOBBIES</a>
+
+        </div><!--/ #nav -->
+
+        <!--content - holds the main content of page; this is where stuff usually changes from page to page-->
+        <div id="content" class="border">
+            <br>
+            <img src="images/avalon.jpg" alt="avalon 737 microphone pre-amp" style=width:600px; class="center">
+            <br>
+            <ul>
+                <li><strong>Photography/videography</strong></li>
+                <li><strong>Video Games</strong></li>
+                <li><strong>Music</strong></li>
+            </ul>
+
+        </div><!--/ #content-->
+
+        <!-- footer - final section of page-->
+        <div id="footer" class="border bg-main">
+            
+            <a href="#">Back to top</a>
+
+            <p>&copy; 2022, S OQUENDO | SE111.02</p>
+
+            <!--image of your validation screenshot goes below; style="width:100%"-->
+
+        </div><!--/ #footer -->
+
+    </div><!--/ #wrapper -->
+    
+</body>
+</html>
