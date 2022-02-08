@@ -1,0 +1,108 @@
+/*---------------------- FONTS ------------------- */
+@font-face {
+    font-family:Hey;
+    src:url(fonts/Hey.ttf);
+}
+
+.hey {
+
+    font-family:Hey;
+    text-align:center;
+}
+
+/*---------------------- NAV ------------------- */
+
+.nav-container {
+
+    width:835px;
+    height:50px;
+    margin:auto;
+    padding:10px;
+    }
+
+    .link-button {
+
+    width:260px;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+    text-decoration:none;
+    display:block;
+    float:left;
+    margin-right:2px;
+    margin-left:2px;
+    background-color:rgb(150, 0, 25);
+    font-family: Hey;
+    box-shadow:3px 3px 1px black;
+
+    }
+
+    .link-button {
+
+    color:white;
+    }
+
+    .link-button:visited {
+
+    color:white;
+    }
+
+    .link-button:hover {
+
+    background-color:rgba(0,0,0, 0.85);
+    font-size:30px;
+    color:red;
+
+}
+
+/*---------------------- MAIN ------------------- */
+
+body {
+    color: black;
+    background-color:black;
+}
+
+#header {
+    
+
+}
+
+div {
+    border:1.5px solid yellow;
+    padding:10px;
+    margin-bottom:10px;
+
+}
+
+#container {
+    width:980px;
+    margin:auto;
+    background-color:rgb(150, 0, 25);
+
+}
+
+#wrapper {
+    width:900px;
+    margin:auto;
+    background-color:rgb(202, 201, 201);
+
+}
+
+.border {
+    border:1px solid yellow;
+    margin-bottom:10px;
+
+}
+
+#trailer {
+    text-align: center
+
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}

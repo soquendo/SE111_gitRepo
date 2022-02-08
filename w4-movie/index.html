@@ -8,70 +8,7 @@
     <meta name="description" content="w4-movie">
     <title>RockNRolla</title>
 
-    <style>
-
-        body {
-            color: black;
-            background-color:black;
-        }
-
-        #header {
-            background-image:url("/images/rocknrolla-1.jpg");
-            background-position:center top;
-            min-height:380px;
-            background-size:contain;
-            background-repeat:no-repeat;
-
-        }
-
-        div {
-            border:2px solid rgba(243, 190, 16, 0.979);
-            padding:10px;
-            margin-bottom:10px;
-
-        }
-
-        #container {
-            width:980px;
-            margin:auto;
-            background-color:rgb(150, 0, 25);
-
-        }
-
-        #wrapper {
-            width:900px;
-            margin:auto;
-            background-color:rgb(202, 201, 201);
-        
-        }
-
-        .border {
-            border:1px solid yellow;
-            margin-bottom:10px;
-
-        }
-    
-        #nav {
-            border:1px solid rgb(255, 233, 32);
-            text-align:center;
-
-        }
-
-        #trailer {
-            text-align: center
-
-        }
-
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-
-        }
-
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="rocknrolla.css">
 
 </head>
 <body>
@@ -88,40 +25,37 @@
         </div><!--/ #header -->
 
         <hr>
-        <div class="center">
-                <p style="text-align:center"><i>The Clash - "Bank Robber"</i></p>
-            <audio controls autoplay>
-                <source src="05 Bank Robber.ogg" type="audio/ogg"> 
-                <source src="audio/05 Bank Robber.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
         
-        <div id="nav" class="border">
+        <div id="nav" class="nav-container">
 
-            <a href="index.html" class="link">HOME</a>
-            <a href="cast.html" class="link">CAST</a>
-            <a href="review.html" class="link">REVIEW</a>
+            <a href="index.html" class="link-button">HOME</a>
+            <a href="cast.html" class="link-button">CAST</a>
+            <a href="review.html" class="link-button">REVIEW</a>
 
         </div><!--/ #nav -->
+
+        <hr>
 
         <div id="trailer" class="border">
             <iframe width="496" height="279"  src="https://www.youtube.com/embed/mnigSqJ2i10" title="YouTube video player" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        </div>
+        </div><!--/ #trailer -->
 
         <hr>
+
         <div id="content" class="border">
 
-            <h2>"Beauty is a cruel mistress, is it not?"</h2>
+            <h2 style="text-align:center">"Beauty is a cruel mistress, is it not?"</h2>
 
             <img src="images/rocknrolla_movieposter.jpg" alt="RockNRolla Movie Poster" style=width:400px; class="center">
             <p></p>
 
-        </div><!--/ #content-->
+        </div><!--/ #content -->
+
+        <hr>
 
 
-        <div id="footer" class="border bg-main">
+        <div id="footer" class="">
             
             <a href="index.html#header">Back to Top</a>
 
@@ -133,7 +67,7 @@
 
     </div><!--/ #wrapper -->
 
-</div><!--/ #container-->
+</div><!--/ #container -->
 
     
 
