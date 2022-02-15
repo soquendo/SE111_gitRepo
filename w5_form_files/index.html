@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sebastian Oquendo">
+    <meta name="description" content="Default HTML Page for SE 111">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Week 5 | Tables and Forms</title>
+</head>
+<body>
+    <!--Build your Table and Form here-->
+    <h1>Birthday Party Registration Form</h1>
+    <thead>
+
+        <tr>
+            <td>
+                <label for="labels">Labels</label>
+            </td>
+        
+            <td>
+                <label for="FormFields">Form Fields</label>
+            </td>
+        </tr>
+        
+        <tbody>
+            
+            <br>
+
+            <tr>
+
+                <td>
+                    <form>
+                    <label for="gfirst">Parent/Guardian Name</label>
+                
+                    <input type="text" required maxlength="20" name="gfirst" id="g-first" placeholder="First Name">
+                    <input type="text" required maxlength="20" name="glast" id="g-last" placeholder="Last Name">
+                    </form>
+                </td>
+
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <form>
+                    <label for="cfirst">Child's First Name</label>
+                
+                    <input type="text" required name="cfirst" id="c-first" placeholder="Child's First Name">
+
+                    </form>
+                </td>
+                
+            </tr>
+            
+
+            <tr>
+
+                <td>
+                    <form>
+                    <label for="age">Child's Age</label>
+                
+                    <input type="number" required name="age" value="3">
+                    </form>
+                </td>
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dateandtime">Date and Time</label>
+                
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    <form>
+                    <label for="date">Date</label>
+                
+                    <input type="date" required name="date">
+
+                    </form>
+                </td>
+                
+            </tr>
+
+            <tr>
+
+                <td>
+                    <form>
+                    <label for="time">Start Time</label>
+                
+                    <input type="time" required name="time">
+
+                    </form>
+                </td>
+                
+            </tr>
+
+            <tr>
+
+                <td>
+                    <form>
+                    <label for="guests">Number of Guests</label>
+                
+                    <input type="number" name="guests" value="5">
+
+                    </form>
+                </td>
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="food">Food</label>
+                
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    <form>
+                    <label for="size">Size</label>
+                
+                    <input type="radio" name="size" value="sm">
+                    <input type="radio" name="size" value="md">
+                    <input type="radio" name="size" value="lg">
+
+                    </form>
+                </td>
+                
+            </tr>
+
+
+
+
+
+        </tbody>
+
+    </thead>
+    
+</body>
+</html>
