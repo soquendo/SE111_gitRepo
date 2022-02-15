@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon 202040">
+    <meta name="description" content="Week 6 JS Intro">
+    
+    <title>Week 6 | JS Intro</title>
+
+</head>
+<body>
+    
+    <!--we should have some sort of HTML in the file-->
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+    <!--IN-DOCUMENT JAVASCRIPT-->
+    <!--in-document: lives within the .html (you saw this with CSS)-->
+    <script>
+        //everything inside of the script tags MUST be written in JAVASCRIPT!
+        
+        //creating a variable -- keyword "var" - declaration of variable
+        // var must be declared before or as they are defined
+        // vars must be defined before they can be used (display, processing, or conditions)
+
+        //declare and assign at once
+        var num1 = 10
+
+        var num2 = 7
+
+        //cannot use num1 or num2 in a process unless they have been DEFINED (value stored to them)
+        var sum = num1 + num2
+
+        /// OUTPUT- 2 ways
+
+        //alert() allows for a pop-up in the browser page to display data; user must interact before further code is read
+
+        //alert() --> print() / OUTPUT
+        
+        // ``denotes a literal string --> works similar to .format() in Python 
+        // makes it easier to display messages and stored value
+        // hold var names inside of ${VAR} - displays stored value of var
+        
+        alert(`The sum is: \n${sum}`)
+        alert(` The sum of ${num1.toFixed(2)} + ${num2} = ${sum}`)
+
+        //console.log() -- good for testing - displays to console only , not for reg user
+        console.log(`The sum of ${num1} + {num2} = ${sum}`)
+        console.log(`hit line 48`) //mssg only
+        console.log(sum)           //value only
+
+
+        // escape sequences also work in Javascript --> \n (inside of strings!) 
+
+        /*to view console:  *F12/Right-Click > Inspect
+                            *Choose CONSOLE at top right
+                            *Refresh page
+
+                                                        */
+
+        //INPUT - gain data from the user with javascript only
+        //prompts user for value; waits for the ENTER key before further code is read
+        prompt("Enter your name: ") 
+
+
+        //store the value form prompt()
+        var fname = prompt("Enter your first Name: ")
+        console.log(fname)
+
+        //prompt() returns strings
+        //concatentation - adds strings together
+        var lname = prompt(`Enter your last name: `)
+        var full = fname + " " + lname
+
+        alert(`hello ${fname}!\n\nYour full name is: ${full} `)
+        //escape sequences work within strings "", '' or ``
+
+        //returns from prompt() are STRINGS meaning you must cast a value as a number() if you want to do math with it
+
+        //alert(`Your last name is: ${name}`)
+
+
+        var num = prompt(`Enter a number: `)
+        num = Number(num) //cast as number
+        console.log(num)
+
+        //basic if statement in javascript
+        if(num === 7)
+        {
+            console.log(`num has a number type value of 7`)
+        }
+        else if(num == 7)
+        {
+            console.log(`num has a value of 7 but is not a number type`)
+        }
+        else
+        {
+            console.log(`num doesn't have a value of 7`)
+        }
+
+
+        var num = prompt("Enter a number to multiply by 7: ")
+
+        //convert num to an actual Number
+        num = Number(num)
+
+        //num is now a NUMBER and can be used in a math process
+        var multi = num * 7
+
+        alert(`${num} * 7 = ${multi}`) //in browser, pop-up alert
+        console.log(`The multi value is: ${multi}`) //in console [inspect]
+
+
+    </script>
+
+
+
+
+</body>
+</html>
