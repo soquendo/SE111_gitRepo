@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sebastian Oquendo"
+
+    <title>w6</title>
+</head>
+<body>
+
+<script>
+
+    var tax = .20
+
+    var payRate = prompt(`\nHow much do you earn per hour?`)
+    payRate = Number(payRate) //cast
+    console.log(payRate)
+
+    var hoursWorked = prompt(`\nHow many hours did you work?`)
+    hoursWorked = Number(hoursWorked) //cast
+    console.log(hoursWorked)
+
+    gross = hoursWorked * payRate
+    taxes = gross * tax
+    netpay = gross - taxes
+
+    alert(`Gross: $${gross.toFixed(2)}\nUncle Sam's Share: $${taxes}\nNet Pay: $${netpay}`)
+    
+    console.log(gross)
+    console.log(taxes)
+    console.log(netpay)
+
+</script>
+
+</body>
+</html>
