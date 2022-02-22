@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<!-- in doc JS below -->
+<script>
+    //selecting the body element
+    var body = document.querySelector(`body`)
+
+    console.log(body)// see the html element and all contents
+    console.dir(body)// look at object and properties
+
+    //create a new var to hold hmtl elements
+    var newP = `` //empty string
+    newP += `<p>` // adds open tag to new string
+    newP += `hello this content was added using JS`
+    newP =+ `</p>` //
+
+    //add new html element
+    body.innerHTML += newP
+
+    //adding an event listener to the #enter-button at the end of the mini form
+    document.querySelector(`#enter-button`).addEventListener(`click`, alertInfo)//must 
+
+
+    function alertInfo(e)
+    {
+        //local var: their val only exists inside of alertInfo()
+        var fname = document.querySelector(`#first`).value
+        console.log(fname)
+        var lname = document.querySelector(`#last`).value
+        //specify .value so we gain the data the user entered into the text field, not input element itself
+
+        var age = document.querySelector(`#age`).value
+        age = Number(age) //cast as Number for math data potential
+
+        var full = fname + ` ` + lname
+        alert(`Hi there, ${full}!`)
+
+        var hello = document.querySelector(`#hello`)
+
+        //change the #hello element to greet user personally
+        hello.innerHTML += ` ${full} !`
+
+        //store HTML element #info into var info to use
+        var info = document.querySelector(`#info`)
+
+        //calculate age in dog years
+        var dog_age = (age * 7).toFixed(1)
+        var cat_age = (age * 4).toFixed(1)
+
+        console.log(`Dog Age: ${dog_age}\nCat Age: ${cat_age}`)
+
+        //add new age info to page using the #info element
+        info.innerHTML += `<br>Here is some info on the age you entered <br><br>YOUR AGE: ${age}<br><br>DOG AGE: ${dog_age}<br><br>CAT AGE: ${cat_age}</p>`
+
+    }//alertInfo() close
+
+    //global variables: can be used anywhere inside of the <script> once they are created - even in functions.
+    var me = document.querySelector(`#me`)
+    var you = document.querySelector(`#you`)
+
+    console.log(me)
+    console.log(me.id)
+    console.log(me.innerHTML)
+
+    //adding event listeners to nonbutton elements
+    me.addEventListener(`click`, clicked)
+
+    function clicked(e)
+    {
+        me.style.color = `red` //me element's style attribute color property is set to red
+        me.style.fontSize = `36px`
+        console.log(`clicked() has been reached `)
+        
+    }
+    
+    you.addEventListener(`click`, greenclick)
+
+    function greenclick(e)
+    {
+        you.style.color = `green`
+        console.log(`greenclick() reached`)
+        
+    }//greenclick() close
+
+    //select the cool stuff button
+    var button = document.querySelector(`#submit`)
+
+    //demo'ing and anonymous function + logging even parameter value details
+    button.addEventListener(`click`, function(event){})
+    {
+        //cehck out whats inside of the event parameter
+        console.log(event)
+
+    }//anonymous func close
+    )//addEventListener close
+
+
+
+</script>
+
+</body>
+</html>
