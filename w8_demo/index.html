@@ -171,7 +171,21 @@
             for(let key in humans[i])
             {//this loop displays each key+value pair within the object (humans[i])
                 //console.log(`${key}: ${humans[i][key]}`)
-                output += `<p><b>${key.toUpperCase()}</b>: ${humans[i][key]}</p>`
+                if(typeof humans[i][key] !== `object`)
+                {
+                    output += `<h4><b>${key.toUpperCase()}</b>: ${humans[i][key]}</h4>`
+
+                }
+                else
+                {//displays all key+value pairs of data structures within an object's properties
+                    for(let newKey in humans[i][key])
+                    {
+                        output += `<h6><b>${newKey.toUpperCase()}</b>:${humans[i][key][newKey]}</h6>`
+
+                    }
+                }
+
+                //output += `<p><b>${key.toUpperCase()}</b>: ${humans[i][key]}</p>`
             }
         
 
