@@ -94,7 +94,7 @@
             console.log(rate)
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
-            var full = fname + lname
+            var full = fname + ` ` + lname
 
             //console.log() the full name value
             console.log(full)
@@ -140,7 +140,7 @@
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            document.querySelector(`#submit`).addEventListener(`click`, alertName)
+            document.querySelector(`#submit`).addEventListener(`click`, submitNow)
         
             function submitNow(e)
             {
