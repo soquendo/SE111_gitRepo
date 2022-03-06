@@ -67,7 +67,12 @@
         //edit the below statement to select the #enter-button id from the HTML file
         document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
         
-        
+        var full = ""
+        var hours = 0
+        var rate = 0
+        var gross = 0
+        var taxAmount = 0
+        var net = 0
 
         function alertName(e)
         {
@@ -82,8 +87,8 @@
             //storing val of input element to fname for use
             var fname = document.querySelector(`#first`).value
             var lname = document.querySelector(`#last`).value
-            var hours = document.querySelector(`#hours`).value
-            var rate = document.querySelector(`#rate`).value
+            hours = document.querySelector(`#hours`).value
+            rate = document.querySelector(`#rate`).value
 
 
             //console.log() all four values
@@ -94,7 +99,7 @@
             console.log(rate)
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
-            var full = fname + ` ` + lname
+            full = fname + ` ` + lname
 
             //console.log() the full name value
             console.log(full)
@@ -108,9 +113,9 @@
 
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
-            var gross = hours * rate
-            var taxAmount = gross * .20
-            var net = gross - taxAmount
+            gross = hours * rate
+            taxAmount = gross * .20
+            net = gross - taxAmount
             
 
             //console.log() all three processed values, rounded to the second decimal place
@@ -141,8 +146,15 @@
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
             document.querySelector(`#submit`).addEventListener(`click`, submitNow)
-        
-            function submitNow(e)
+
+
+            //---------------------- function shouldn't be within the other function ----
+            
+            
+
+        }
+
+        function submitNow(e)
             {
 
                 /*NOTE FOR TESTING:
@@ -150,8 +162,6 @@
 
                 alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
             }
-            
-        }
         
     </script>
     
