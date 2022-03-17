@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Sebastian Oquendo"
+	<meta name="author" content="D KNIGHT">
+    <meta name="description" content="W8 Assignment">
     <title>Week 8 | Homework Assignment</title>
+	<!--D Knight | SE111.02-->
 </head>
 <body>
 
@@ -38,15 +40,14 @@
 	
 		//Store the elements (tags) in variables
 		var fname = document.querySelector(`#first`).value
-		var lname = document.querySelector(`#last`).value
+        var lname = document.querySelector(`#last`).value
 
 		//Make an array to store the people
 		var people = []
 		
 
-
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		document.querySelector(`#button`).addEventListener(`click`, calcAndDisplay)		
+		document.querySelector(`#button`).addEventListener(`click`, calcAndDisplay)
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -73,11 +74,10 @@
             var person = {
 				first: document.querySelector(`#first`).value,
 				last: document.querySelector(`#last`).value
-
             }//end of person object
 
 			//Add the person object into the people array by using the .push() array method.
-			people.push(person)			
+			people.push(person)
 
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
@@ -95,14 +95,15 @@
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
 			console.log(people)
+			
 
 			//create a variable called 'output' that has an empty string value stored to 
-			var output = ``			
+			var output = ``
 
 			//Loop through the objects in the people array
 			for(let i = 0; i < people.length; i++)
             {
-				
+
 				//Loop through each property in the object
 				for(key in people[i])
                 {
@@ -123,9 +124,6 @@
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
 				document.querySelector(`#output`).innerHTML = output
-				
-
-
 
 		}
 	
