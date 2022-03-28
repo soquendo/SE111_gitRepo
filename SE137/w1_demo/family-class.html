@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Demo</title>
+    <style>
+        #simpson{
+            background-color:yellow;
+        }
+        #griffin{
+            background-color:limegreen;
+        }
+        #bundy{
+            background-color:orange;
+        }
+        .dad{
+            font-weight:bold;
+        }
+        .mom{
+            font-style:italic;
+        }
+        .son{
+            text-decoration:underline;
+        }
+        .daughter{
+            font-family:"Comic Sans MS";
+        }
+        .boy
+        {
+            background-color:paleturquoise;
+        }
+        .girl
+        {
+            background-color:pink;
+        }
+        .hide
+        {
+            display:none;
+        }
+        .parent{
+            font-size:36px;
+        }
+        .child{
+            font-size:18px;
+        }
+        .boy.child{
+            text-transform:uppercase; 
+        }
+        #simpson p{
+            border:3px solid black;
+        }
+
+        #griffin .girl::after{
+            content:" -girl"
+        }
+       
+    </style>
+</head>
+<body>
+    <a href="#" id="simpson-link">show simpsons</a>
+    <a href="#" id="griffin-link">show griffins</a>
+    <a href="#" id="bundy-link">show bundies</a>
+    <a href="#" id="all-link">show all</a>
+    <div id="simpson">
+        <p class="dad">Homer</p>
+        <p class="">Marge</p>
+        <p class="">Bart</p>
+        <p class="">Lisa</p>
+        <p class="">Maggie</p>
+    </div>
+    <div id="griffin">
+        <p class="dad">Peter</p>
+        <p class="">Lois</p>
+        <p class="">Meg</p>
+        <p class="">Chris</p>
+        <p class="">Stewie</p>
+    </div>
+    <div id="bundy">
+        <p class="dad">Al</p>
+        <p class="">Peggy</p>
+        <p class="">Kelly</p>
+        <p class="">Bud</p>
+    </div>
+    <script>
+        //links
+       
+        //divs
+    
+
+    </script>
+</body>
+</html>
