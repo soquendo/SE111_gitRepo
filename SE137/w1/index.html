@@ -34,13 +34,9 @@
 
         <div id="nav">
 
-            <a href="#">Bio</a>
-            <a href="#">Education</a>
-            <a href="#">Hobbies</a>
-
-            <!--<a href="index.html" class="link">HOME</a>
-            <a href="schools.html" class="link">SCHOOLS</a>
-            <a href="hobbies.html" class="link">HOBBIES</a> -->
+            <a href="#" id="bio-link">Bio</a>
+            <a href="#" id="ed-link">Education</a>
+            <a href="#" id="hobbies-link">Hobbies</a>  
 
         </div><!--/ NAV END -->
 
@@ -48,7 +44,7 @@
 
         <div id="main">
                  
-            <div id="bio">
+            <div id="bio" class="hide">
                 <h2>My Bio</h2>
 
                 <img src="images/IMG_9404.JPG" alt="wide picture of author" style=width:500px;>
@@ -87,7 +83,7 @@
 
                 <hr>
 
-            </div>><!-- HOBBIES END -->
+            </div><!-- HOBBIES END -->
 
             <div id="footer">
 
@@ -103,11 +99,35 @@
     </div><!-- WRAPPER -->
 
     <script>
+        //links
+        var bLink = document.querySelector(`#bio-link`)
+        var eLink = document.querySelector(`#ed-link`)
+        var hLink = document.querySelector(`#hobbies-link`)
         
-        var links = document.querySelectorAll(`a`)
-        var div = document.querySelectorAll(`div`);
-
-        link[0].addEventListener(`click`, (e)=>{console.log(e)})
+        bLink.addEventListener(`click`, showBio)
+        function showBio(e)
+        {
+            e.preventDefault()
+            bio.classList.remove(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+        eLink.addEventListener(`click`, showEd)
+        function showEd(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.remove(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+        hLink.addEventListener(`click`, showHobbies)
+        function showHobbies(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.remove(`hide`)
+        }
 
 
     </script>
