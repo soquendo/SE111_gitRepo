@@ -1,0 +1,31 @@
+/*---------------------- FONTS ------------------- */
+@font-face {
+    font-family:Gobold;
+    src:url(fonts/Gobold\ Thin\ Italic.ttf);
+}
+
+/*---------------------- --- ------------------- */
+
+
+body {
+    color: black;
+    background-color: rgb(241, 241, 241);
+}
+
+.hide {
+    display:none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.closecenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
