@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W1 Bio</title>
+
+    <style>
+        body {
+            color: black;
+            background-color: rgba(255,248,221,255);
+        }
+
+        .hide {
+            display:none;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+    <div id="wrapper">
+
+        <div id="header" class="">
+
+            <h1><i>Sebastian Oquendo</i></h1>
+
+        </div><!--/ HEADER END -->
+
+        <hr>
+
+        <div id="nav">
+
+            <a href="#" id="bio-link">Bio</a>
+            <a href="#" id="ed-link">Education</a>
+            <a href="#" id="hobbies-link">Hobbies</a>  
+
+        </div><!--/ NAV END -->
+
+        <hr>
+
+        <div id="main">
+                 
+            <div id="bio" class="hide">
+                <h2>My Bio</h2>
+
+                <img src="images/IMG_9404.JPG" alt="wide picture of author" style=width:500px;>
+
+                <p>Born and raised in Rhode Island, I grew up in Pawtucket and Lincoln where my only concerns were sports, video games and music. Frequent childhood trips to Queens, NY to visit family would eventually influence the decision to move there myself. I started recording and making music and decided to attend audio school in Manhattan. I'd end up teaching myself photography, videography and graphic design and while I don't consider myself a professional in any of those, I'd say I'm moderately proficient in each.
+                    
+                Some time later, I found work at the Javits Center as part of Teamsters and spent several years there. The pandemic basically shut down the trade show industry and left me without work indefinitely. This forced me to begin to look at other career options and ultimately deciding on returning to school to learn a new trade where I initially joined for cybersecurity but soon switched over to software engineering.</p>
+
+                <hr>
+
+            </div> <!-- BIO END -->
+
+            <div id="ed" class="hide">
+                <h2>Schooling</h2>
+
+                <ul>
+                    <li><a href="https://www.neit.edu/">New England Institute of Technology</a></li>
+                    <li><strong>Institute of Audio Research</strong></li>
+                    <li>Community College of Rhode Island</li>
+                </ul>
+
+                <hr>
+
+            </div><!-- EDUCATION END -->
+
+            <div id="hobbies" class="hide">
+                <h2>Hobbies</h2>
+
+                <ol>
+                    <li><b>Music</b></li>
+                    <li><i>Photography/Videography</i></li>
+                    <li><em>Video games</em></li>
+                </ol>
+
+                <img src="images/avalon.jpg" alt="avalon 737 microphone pre-amp" style=width:500px;>
+
+                <hr>
+
+            </div><!-- HOBBIES END -->
+
+            <div id="footer">
+
+                ©2020 Sebastian Oquendo | W1 Assignment
+
+
+            </div><!-- FOOTER END -->
+
+
+        </div><!-- MAIN DIV -->
+
+
+    </div><!-- WRAPPER -->
+
+    <script>
+        //links
+        var bLink = document.querySelector(`#bio-link`)
+        var eLink = document.querySelector(`#ed-link`)
+        var hLink = document.querySelector(`#hobbies-link`)
+        
+        bLink.addEventListener(`click`, showBio)
+        function showBio(e)
+        {
+            e.preventDefault()
+            bio.classList.remove(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+        eLink.addEventListener(`click`, showEd)
+        function showEd(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.remove(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+        hLink.addEventListener(`click`, showHobbies)
+        function showHobbies(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.remove(`hide`)
+        }
+
+
+    </script>
+
+</body>
+</html>
