@@ -4,9 +4,8 @@
     src:url(fonts/GoboldThin.ttf);
 }
 
-@import url(//fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,300&display=swap);
 
-@font-face {
+/*@font-face {
     font-family: Chakra;
     src:url(fonts/ChakraPetch-LightItalic.ttf);
 }
@@ -36,7 +35,7 @@ body {
     background: linear-gradient(180deg, rgba(215,0,0,1) 0%, rgba(0,0,0,1) 66%, rgba(0,0,0,1) 100%);
     width: auto;
     height: 115px;
-    font-family: Chakra;
+    font-family: 'Chakra Petch', sans-serif;
     color: white;
     border-bottom: 10px solid white;
 

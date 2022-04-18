@@ -11,13 +11,32 @@ body, html{
 body{
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     /*alignment is vertical, justify is left/right*/
+    align-items: flex-start;
+
 }
 
 main{
-    background-color:antiquewhite;
+    background-color:rgb(250, 221, 183);
     width:80%;
-    min-height:300px;
     
+}
+
+header{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    border:1px solid black;
+    align-items: baseline;
+    padding:0 20px 0 20px;
+
+}
+
+
+
+i{
+    font-size:40px;
+    color:rgb(255, 247, 135);
+    margin: 0 10px 0 10px;
 }
