@@ -104,7 +104,7 @@ body {
     float:left;
     margin-right:2px;
     margin-left:2px;
-    background-color:rgb(73, 71, 71);
+    background-color:rgba(73, 71, 71, 0.39);
     font-family: 'Montserrat', sans-serif;
     box-shadow:3px 3px 5px black;
 
