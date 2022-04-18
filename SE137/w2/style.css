@@ -1,7 +1,7 @@
 /*---------------------- FONTS ------------------- */
 @font-face {
     font-family: Gobold;
-    src:url(fonts/Gobold Thin.ttf);
+    src:url(fonts/GoboldThin.ttf);
 }
 
 @import url(//fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,300&display=swap);
@@ -57,9 +57,8 @@ h2 {
 
 .btn-container {
 
-    width:835px;
+    width:900px;
     height:50px;
-    border:1px solid white;
     margin:auto;
     padding:5px;
 
@@ -74,9 +73,9 @@ h2 {
     line-height:35px;
     text-decoration:none;
     display:block;
-    float:left;
+    float:right;
     margin-right:auto;
-    margin-left:9px;
+    margin-left:auto;
     background: rgb(160, 0, 0);
     font-family: Gobold;
     box-shadow: 3px 3px 1px black;
