@@ -1,46 +1,71 @@
 /*---------------------- FONTS ------------------- */
 @font-face {
-    font-family:Gobold;
-    src:url(fonts/Gobold\ Thin\ Italic.ttf);
+    font-family: Gobold;
+    src:url(fonts/Gobold Thin.ttf);
+}
+
+@import url(//fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,300&display=swap);
+
+@font-face {
+    font-family: Chakra;
+    src:url(fonts/ChakraPetch-LightItalic.ttf);
 }
 
 /*---------------------- --- ------------------- */
 
-header {
-    background-color: rgb(197, 197, 197);
-    width: 300px;
-    height: 300px;
+body {
 
-}/*------ end of header ------*/
-
-*{
-
-    box-sizing: border-box;
-
+    background-image:url("images/carbon.jpg");
+    background-position:center top;
+    
+    
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 100px 50px 100px 50px;
-}
-
-html, body {
-    border: 1px;
-    height: 100%
-
-
-}
-
-nav {
-
-    width:550px;
-    height:40px;
+#wrapper {
+    background-color:white;
+    width:1080px;
+    padding:25px;
     margin:auto;
-    padding:100px 50px 100px 50px;
-    }
+    border: 1px solid rgb(190, 190, 190);
+    min-height:1000px;
+}
 
-    .link-button {
+#header {
 
+    background: rgb(215,0,0);
+    background: linear-gradient(180deg, rgba(215,0,0,1) 0%, rgba(0,0,0,1) 66%, rgba(0,0,0,1) 100%);
+    width: auto;
+    height: 115px;
+    font-family: Chakra;
+    color: white;
+    border-bottom: 10px solid white;
+
+}
+#nav {
+    display: inline-block;
+}
+
+h1 {
+    font-family: Chakra;
+}
+
+h2 {
+    font-family: Chakra;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.btn-container {
+
+    width:835px;
+    height:50px;
+    border:1px solid white;
+    margin:auto;
+    padding:5px;
+
+}
+
+.link-button {
     width:260px;
     height:35px;
     text-align:center;
@@ -51,33 +76,48 @@ nav {
     display:block;
     float:left;
     margin-right:auto;
-    margin-left:9.17px;
-    background-color:rgb(61, 61, 61);
+    margin-left:9px;
+    background: rgb(160, 0, 0);
     font-family: Gobold;
-    box-shadow:3px 3px 1px black;
+    box-shadow: 3px 3px 1px black;
+    
+}
 
-    }
 
-    .link-button:visited {
+.link-button:visited {
+    color:rgb(247, 241, 64);
+}
 
-    color:rgb(39, 0, 232);
-    }
-
-    .link-button:hover {
-
-    background-color:rgba(0,0,0, 0.85);
-    color:red;
-
-}/*------ end of nav ------*/
+.link-button:hover {
+    color:grey;
+}
 
 
 main {
     color: black;
     background-color: rgb(241, 241, 241);
+    font-family: Chakra;  
 
-}/*------ end of body ------*/
+}
 
+p {
+    font-family: Chakra;
+    border: 500px;
+    border-bottom: 500px;
 
+}
+
+ul {
+    font-family: Chakra;
+    border: 500px;
+    border-bottom: 500px;
+}
+
+ol {
+    font-family: Chakra;
+    border: 500px;
+    border-bottom: 500px;
+}
 
 .hide {
     display:none;
