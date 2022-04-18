@@ -1,0 +1,23 @@
+*{
+    box-sizing:border-box;
+}
+
+body, html{
+    margin:0;
+    height: 100%;
+    background-color: rgb(247, 186, 186);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*alignment is vertical, justify is left/right*/
+}
+
+main{
+    background-color:antiquewhite;
+    width:80%;
+    min-height:300px;
+    
+}
