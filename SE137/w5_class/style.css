@@ -1,0 +1,49 @@
+@charset "UTF-8";
+{
+    border-box
+}
+
+main{
+    background-color: grey;
+    padding: 5px;
+    width: 1000px;
+    position:relative;
+    margin: 0 auto 0 auto;
+}
+
+header{
+    float:left;
+    background-color: red;
+    width: 1000px;
+}
+
+nav{
+    float: left;
+    background-color: yellow;
+    width: 1000px;
+}
+
+section{
+    float: left;
+    background-color: aliceblue;
+    width: 1000px;
+}
+
+.left{
+    float:left;
+    background-color: aquamarine;
+    width: 750px;
+    
+
+}
+
+.right{
+    float:right;
+    width: 250px;
+}
+
+footer{
+    background-color: antiquewhite;
+    width: 1000px;
+    clear:both;
+}
