@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px auto 200px auto;
+}
+
+main{
+    background-color: bisque;
+}
+
