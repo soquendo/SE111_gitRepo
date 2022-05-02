@@ -1,0 +1,17 @@
+a{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background-image: url(`images/button.png`)
+}
+
+a:link, a:visited{
+    background-position-y:0;
+    transition:all 1s;
+    font-size:16px;
+}
+a:hover, a:active{
+    background-position-y:-40;
+    transition:all 1s;
+    font-size:32px;
+}
