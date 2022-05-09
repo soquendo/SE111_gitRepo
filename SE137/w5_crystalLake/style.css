@@ -6,15 +6,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap%27%27');
 
 main{
-    background-color: #000000;
+    background-color: #504949;
     display: grid;
     grid-template-areas: 
         'hdr hdr hdr hdr hdr'
         'bnr bnr bnr bnr rmd'
         'lmd lmd cen cen rmd'
         'ftr ftr ftr ftr ftr';
-        row-gap: 20px;
-        column-gap: 20px;
+        row-gap: 15px;
+        column-gap: 15px;
         grid-template-columns: 20% 20% 20% 20% 20%;
 
 }
@@ -22,37 +22,40 @@ main{
 header{
     color:#BB0908;
     display: flex;
-    flex-direction: row;
     font-family: 'Teko';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 69px;
-    min-height: 100px;
     justify-content: space-between;
-    height:100px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    grid-area: hdr;
+    padding: 10px;
+
+}
+
+.fa-brands{
+    float: right;
     grid-area: hdr;
 }
 
 
-header > i {
-    float: right;
-    position: absolute;
+#banner{
+    grid-area: bnr;
+    min-height: 388px;
 
 }
 
-#banner{
-    grid-area: bnr;
-    background-image: url("images/banner.png");
-    min-height: 388px;
+#banner > img{
+    width: 100%;
 }
 
 #leftmod {
     background-color: #232323;
     grid-area: lmd;
-    display: flex;
+    display: grid;
     flex-wrap: flex;
+    flex-direction: row;
     border-top: 4px solid #BB0908;
     min-height: 481px;
     
@@ -71,13 +74,19 @@ header > i {
     line-height:72px;
     border-bottom: 4px solid rgb(120, 22, 22);
     color: red;
+    min-width: 353px;
 
 }
 
-#leftmod > p {
-    height: 216px;
-    width: 100px;
+#lmtext {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    min-width: 349px;
     color: white;
+    grid-area: lfm;
 
 }
 
@@ -99,33 +108,44 @@ header > i {
 
 
 #rightmod{
-    background-color: #232323;
-    position: absolute;
-    width: 360px;
-    height: 918px;
-    display: flex;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    border-top: 4px solid #BB0908;
-    float: right;
+    background-color: #232323;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    min-width: 360px;
     grid-area: rmd;
+}
 
+#rightmod > img {
+    float: center;
+    width: 325px;
 }
 
 #dvd{
     background-color: #232323;
     display: flex;
-    float: right;
     width: 117px;
-    height: 148px;
     grid-area: lmd;
+    min-width: 349px;
+    position:absolute;
+}
 
+#dvd > img{
+    width:100%;
+    float:left;
 }
 
 
 
 footer{
-    position: absolute;
-    width: 1820px;
-    height: 60px;
+    color: white;
     grid-area: ftr;
+    background-color: #070707;
+    padding: 5px;
 }

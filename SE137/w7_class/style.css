@@ -7,6 +7,15 @@
         background-color: yellow;
         transition: all 1s;
     }
+    main{
+        width:100vw;
+    }
+    html{
+        font-size: 16px;
+    }
+    header{
+        display: none;
+    }
 }
 
 @media (min-width:700px)
@@ -14,6 +23,9 @@
     body
     {
         background-color: orange;
+    }
+    html{
+        font-size: 32px;
     }
 }
 
@@ -23,5 +35,33 @@
     {
         background-color: red;
     }
+    main{
+        width:50vw;
+    }
+    html{
+        font-size: 48px;
+    }
+}
 
+
+
+main{
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1em;
+}
+
+header{
+    background-color: rgb(117, 102, 102);
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: .5em;
+}
+
+p{
+    font-size: .5rem;
+}
+
+span{
+    font-size: .5rem;
 }
