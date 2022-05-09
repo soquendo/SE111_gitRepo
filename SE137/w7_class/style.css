@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@media (min-width:500px) /* and (max-width:600px)*/
+{
+    body
+    {
+        background-color: yellow;
+        transition: all 1s;
+    }
+}
+
+@media (min-width:700px)
+{
+    body
+    {
+        background-color: orange;
+    }
+}
+
+@media (min-width:1000px)
+{
+    body
+    {
+        background-color: red;
+    }
+
+}

@@ -1,0 +1,108 @@
+html, body{
+    margin: 0;
+    height:100%;
+}
+body{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+}   
+main{
+    width:100%;
+    background-color: rgb(67, 67, 67);
+    display:flex;
+    flex-direction: column;
+
+}
+
+header{
+    background-color: rgb(145, 143, 143);
+    height:24px;
+}
+
+section{
+    height:100%;
+    background-color:rgb(193, 181, 165);
+    display:flex; 
+    /* justify content flex-start*/
+}
+
+aside{
+    width: 40px;
+    background-color: darkkhaki;
+}
+
+nav{
+    width:135px;
+    display:flex;
+    justify-content: flex-end;
+    background-color:rgb(190, 190, 190);
+    transition: width 1s;
+    overflow:hidden;
+}
+
+details{
+    margin:5px;
+    width:90px;
+}
+
+summary{
+    width:90px;
+}
+
+#content{
+    width:100%;
+    background-color:lightsteelblue;
+    display: flex;
+    flex-direction: column;
+}
+
+    #tabs{
+        background-color: cornsilk;
+        border-right: 1px solid rgb(67, 67, 67);
+    }
+
+    #tabs a{
+        width:90px;
+        height: 35px;
+        display:inline-block;/*-flex*/
+    }
+
+    #tabs a:link, #tabs a:visited{
+        background-color: azure;
+        
+    }
+
+    #tabs a:hover, #tabs a:active{
+        background-color: antiquewhite;
+    }
+
+    #breadcrumbs{
+        background-color: black;
+        color:lightgray;
+    }
+
+    #textarea{
+        resize:none;
+        width: 100%;
+        height: 100%;
+        border:none;
+        outline:none;
+        box-sizing: border-box;
+        background-color:rgb(36, 63, 87);
+        color:rgb(225, 203, 203);
+        
+
+    }
+
+footer{
+    height:16px;
+    background-color:aqua;
+}
+
+.hidden{
+    width:0;
+    padding: 0;
+    
+}

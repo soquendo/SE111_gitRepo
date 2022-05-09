@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap%27%27');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27%27');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap%27%27');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap%27%27');
+
+main{
+    background-color: #000000;
+    display: grid;
+    grid-template-areas: 
+        'hdr hdr hdr hdr hdr'
+        'bnr bnr bnr bnr rmd'
+        'lmd lmd cen cen rmd'
+        'ftr ftr ftr ftr ftr';
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+
+}
+
+header{
+    color:#BB0908;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 69px;
+    min-height: 100px;
+    justify-content: space-between;
+    height:100px;
+    background-color: black;
+    grid-area: hdr;
+}
+
+
+header > i {
+    float: right;
+    position: absolute;
+
+}
+
+#banner{
+    grid-area: bnr;
+    background-image: url("images/banner.png");
+    min-height: 388px;
+}
+
+#leftmod {
+    background-color: #232323;
+    grid-area: lmd;
+    display: flex;
+    flex-wrap: flex;
+    border-top: 4px solid #BB0908;
+    min-height: 481px;
+    
+}
+
+#leftmod > img {
+    width: 310px;
+}
+
+#leftmod > h2{
+    height: 77px;
+    font-family: 'Rock Salt';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height:72px;
+    border-bottom: 4px solid rgb(120, 22, 22);
+    color: red;
+
+}
+
+#leftmod > p {
+    height: 216px;
+    width: 100px;
+    color: white;
+
+}
+
+#midcenter{
+    background-color: #232323;
+    grid-area: cen;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    border-top: 4px solid rgb(120, 22, 22);
+    min-height: 481px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+#rightmod{
+    background-color: #232323;
+    position: absolute;
+    width: 360px;
+    height: 918px;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 4px solid #BB0908;
+    float: right;
+    grid-area: rmd;
+
+}
+
+#dvd{
+    background-color: #232323;
+    display: flex;
+    float: right;
+    width: 117px;
+    height: 148px;
+    grid-area: lmd;
+
+}
+
+
+
+footer{
+    position: absolute;
+    width: 1820px;
+    height: 60px;
+    grid-area: ftr;
+}
