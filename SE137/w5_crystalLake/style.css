@@ -6,22 +6,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap%27%27');
 
 main{
-    background-color: #504949;
+    background-color: #2d2d2d;
     display: grid;
     grid-template-areas: 
         'hdr hdr hdr hdr hdr'
         'bnr bnr bnr bnr rmd'
         'lmd lmd cen cen rmd'
         'ftr ftr ftr ftr ftr';
-        row-gap: 15px;
-        column-gap: 15px;
+        row-gap: 5px;
+        column-gap: 5px;
         grid-template-columns: 20% 20% 20% 20% 20%;
+        justify-content: flex-start;
+    
 
 }
 
 header{
     color:#BB0908;
-    display: flex;
+    display: flexbox;
     font-family: 'Teko';
     font-style: normal;
     font-weight: 400;
@@ -30,39 +32,59 @@ header{
     justify-content: space-between;
     background-color: rgb(0, 0, 0);
     grid-area: hdr;
+    float: bottom;
     padding: 10px;
+    min-height: 70px;
 
 }
 
 .fa-brands{
     float: right;
     grid-area: hdr;
+    justify-content: space-evenly;
 }
 
 
 #banner{
-    grid-area: bnr;
+    background-image: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    min-width: 1440px;
     min-height: 388px;
+    background-color: #070707;
+    border-bottom: 15px solid #2d2d2d;
 
 }
 
-#banner > img{
-    width: 100%;
-}
+
 
 #leftmod {
-    background-color: #232323;
+    background-color: #393939;
     grid-area: lmd;
     display: grid;
+    grid-template-areas: 
+        'pstr pstr anv anv'
+        'pstr pstr flr flr'
+        'pstr pstr flr flr'
+        'pstr pstr blr amz'
+        'pstr pstr blr prc';
+        row-gap: 15px;
+        column-gap: 10px;
+        grid-template-columns: 22% 23% 27% 28%;
+        grid-template-rows: 10% 25% 25% 20% 20%;
     flex-wrap: flex;
     flex-direction: row;
-    border-top: 4px solid #BB0908;
+    border-top: 5px solid #BB0908;
     min-height: 481px;
+    width: 700px;
+    border-bottom: 20px solid #2d2d2d;
     
 }
 
 #leftmod > img {
     width: 310px;
+    grid-area: pstr;
 }
 
 #leftmod > h2{
@@ -72,38 +94,46 @@ header{
     font-weight: 400;
     font-size: 30px;
     line-height:72px;
-    border-bottom: 4px solid rgb(120, 22, 22);
+    text-align: left;
     color: red;
-    min-width: 353px;
-
+    min-width: 300px;
+    grid-area: anv;
+    float:left;
 }
 
 #lmtext {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
+    font-weight: lighter;
     font-size: 18px;
-    line-height: 36px;
-    min-width: 349px;
+    width: 90%;
     color: white;
-    grid-area: lfm;
+    grid-area: flr;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 5px solid #BB0908;
+    
 
 }
 
 #midcenter{
-    background-color: #232323;
+    background-color: #393939;
     grid-area: cen;
     color: white;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 24px;
     line-height: 36px;
-    border-top: 4px solid rgb(120, 22, 22);
+    border-top: 5px solid #BB0908;
     min-height: 481px;
-    display: flex;
+    display: flexbox;
     flex-wrap: wrap;
-
+    padding: 30px;
+    width: 740px;
+    float:left;
+    border-bottom: 20px solid #2d2d2d;
+    flex-shrink: 3;
 }
 
 
@@ -112,7 +142,7 @@ header{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #232323;
+    background-color: #393939;
     color: white;
     font-family: 'Roboto';
     font-style: normal;
@@ -120,32 +150,60 @@ header{
     font-size: 18px;
     min-width: 360px;
     grid-area: rmd;
+    padding: 25px;
 }
 
+
 #rightmod > img {
+    width: 100%;
     float: center;
-    width: 325px;
 }
 
 #dvd{
     background-color: #232323;
     display: flex;
     width: 117px;
-    grid-area: lmd;
+    grid-area: blr;
     min-width: 349px;
-    position:absolute;
+    position:relative;
 }
 
 #dvd > img{
-    width:100%;
+    width:40%;
     float:left;
+    grid-area: blr;
+    min-width: 117px;
 }
 
+.link{
+    color:rgb(0, 142, 161);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    grid-area: amz;
+    padding-left: 20px;
+}
 
+#price{
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: prc;
+    text-decoration: underline;
+}
 
 footer{
     color: white;
     grid-area: ftr;
     background-color: #070707;
     padding: 5px;
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    padding-left: 35px;
 }
