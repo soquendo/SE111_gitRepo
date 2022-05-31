@@ -1,22 +1,41 @@
 @charset "UTF-8";
 
-@media (max-width:500px)
-{
-    body
-    {
-        background-color: rgb(193, 192, 192);
-        transition: 1s;
-    }
-
-
-}
-
-@media (max-width:1000px)
+@media (min-width:500px)
 {
     body{
-        
-        transition: 1s;
+        color:red;
     }
+
+    tr:first-child{
+        display:none;
+    }
+}
+
+@media (min-width:1000px)
+{
+    body{
+        color:blue;
+    }
+
+    tr:first-child{
+        display:none;
+    }
+}
+
+@media (min-width:1920px)
+{
+    body{
+        color:darkolivegreen;
+    }
+
+    .h1{
+        display: 150%;
+    }
+
+    tr:last-child{
+        display:none;
+    }
+
 }
 
 html, body{
@@ -29,7 +48,7 @@ body{
     align-items: center;
 }
 table{
-    width:80%;
+    width:90%;
     border-collapse: collapse;
 }
  td{
