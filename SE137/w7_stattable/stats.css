@@ -1,56 +1,117 @@
 @charset "UTF-8";
 
-@media (min-width:500px)
-{
-    body{
-        color:red;
-    }
-
-    tr:first-child{
-        display:none;
-    }
-}
-
-@media (min-width:1000px)
-{
-    body{
-        color:blue;
-    }
-
-    tr:first-child{
-        display:none;
-    }
-}
-
-@media (min-width:1920px)
-{
-    body{
-        color:darkolivegreen;
-    }
-
-    .h1{
-        display: 150%;
-    }
-
-    tr:last-child{
-        display:none;
-    }
-
-}
-
 html, body{
     margin:0;
     height:100vh;
+    font-family: Arial, sans-serif;
 }
+
 body{
     display:flex;
     flex-direction: column;
     align-items: center;
 }
+
 table{
     width:90%;
     border-collapse: collapse;
 }
- td{
+
+td{
     border-bottom:1px solid black;
 }
+
+thead{
+    background-color: goldenrod;
+    color: white;
+}
+
+h1{
+    color:cornflowerblue;
+    font-family: Impact;
+}
+
+@media (max-width:1920px)
+{
+    body{
+        color:darkolivegreen;
+        background-color: black;
+        font-size: 1em;
+        transition: 1s;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    thead > tr:first-child{
+        display: table-row;
+    }
+
+    thead > tr:last-child{
+        display:none;
+    }
+    
+    thead{
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width:1000px)
+{
+    body{
+        background-color: gainsboro;
+        font-size: 1em;
+        transition: 1s;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+    
+    thead{
+        font-size: 1em;
+    }
+
+    thead > tr:first-child{
+        display: none;
+    }
+
+    thead > tr:last-child{
+        display: table-row;
+    }
+}
+
+@media (max-width:500px)
+{
+    body{
+        background-color:burlywood;
+        color:indianred;
+        font-size: 1.25em;
+        transition: 1s;
+    }
+
+    h1{
+        font-size: 2em;
+        color:cornsilk;
+    }
+
+    .stat{
+        display:none;
+    }
+
+    thead{
+        font-size: 1.5em;
+    }
+
+    thead > tr:first-child{
+        display:none;
+    }
+}
+
+
+
+
+
+

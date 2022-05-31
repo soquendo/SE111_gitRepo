@@ -15,6 +15,10 @@ main{
     color: #FCBF49;
 }
 
+.navbar-toggler-icon{
+    color: #FCBF49;
+}
+
 html, body{
     margin:0;
     height:100%;
