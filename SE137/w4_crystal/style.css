@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/*imported fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap%27%27');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27%27');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap%27%27');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap%27%27');
+
+body{
+    background-color: rgb(51, 51, 51);
+}
+#header{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    background-color: black;
+    grid-area: hd;
+    
+
+}
+
+h1{
+    color: rgba(187, 9, 8, 1);
+    font-family: 'Teko';
+    font-weight: lighter;
+    font-size: 48px;
+    padding-left: 30px;
+    margin-bottom: auto;
+}
+
+#header > p{
+    position: absolute;
+    right: 40px;
+    flex-grow: 5;
+    color: rgba(187, 9, 8, 1);  
+    
+}
+
+#main{
+    display: grid;
+    grid-template-areas: 
+    "br br br br rt"
+    "bl bl bm bm rt"
+    "ft ft ft ft ft";
+    row-gap: 20px;
+    column-gap: 20px;
+
+    grid-template-columns: 19% 19% 19% 19% 19%;
+}
+
+#banner {
+    grid-area: br;
+    background-image: url("images/banner.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid red;
+    min-height: 388px;
+    max-height: 1200px;
+    
+}
+
+#bleft{
+    grid-area: bl;
+    border-top: 5px solid red;
+
+}
+#poster{
+    
+    max-height: 478px;
+    max-width: 310px;
+    
+}
+
+#dvd{
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#bmid{
+    grid-area: bm;
+    border-top: 5px solid red;
+
+}
+
+#pennant{
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#right{
+    grid-area: rt;
+    border: 5px solid red;
+}
+
+#sign{
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#water{
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#footer{
+    grid-area: ft;
+    background-color: black;
+    color: white;
+}
+
