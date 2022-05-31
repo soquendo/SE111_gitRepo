@@ -31,6 +31,16 @@ h1{
     font-family: Impact;
 }
 
+
+thead > tr:first-child{
+    display: table-row;
+}
+
+thead > tr:last-child{
+    display:none;
+}
+
+
 @media (max-width:1920px)
 {
     body{
