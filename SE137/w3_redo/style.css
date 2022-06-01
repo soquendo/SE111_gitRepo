@@ -4,12 +4,73 @@
     box-sizing: border-box;
 }
 
-.grid-container {
+.grid-container{
     display: grid;
-    grid-template-columns: 200px auto 200px auto;
+    grid-template-areas: 
+        'hdr hdr hdr hdr hdr'
+        'bio bio bio bio bio'
+        'bio bio bio bio bio'
+        'hby hby hby scl scl'
+        'ftr ftr ftr ftr ftr';
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-content: flex-start;
+}
+
+header{
+    grid-area: hdr;
+    min-height:200px;
+    display: flexbox;
+    font-size: 24px;
+    border-bottom: 4px solid rgb(255, 231, 110);
+    background-color: rgb(52, 52, 52);
+    float: bottom;
+
+}
+
+#icons{
+    float: right;
+    padding: 25px;
+    color:rgb(234, 207, 0);
 }
 
 main{
-    background-color: bisque;
+    
+    background-color: #7c7c7c;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 5px;
 }
 
+h1{
+    color:#BB0908;
+}
+
+h2{
+    color:rgb(234, 207, 0);
+    padding: 2px;
+}
+
+bio{
+    
+    grid-area: bio;
+    display: flex;
+}
+
+ed{
+    grid-area: scl;
+    border-bottom: 2 px solid crimson;
+    justify-content: right;
+}
+
+hobbies{
+    display: flex;
+    grid-area: hby;
+    border-bottom: #BB0908;
+}
+
+footer{
+    grid-area: ftr;
+    float: bottom;
+    padding: 2px;
+}
