@@ -12,8 +12,8 @@
         'bio bio bio bio bio'
         'hby hby hby scl scl'
         'ftr ftr ftr ftr ftr';*/
-    row-gap: 5px;
-    column-gap: 5px;
+    row-gap: 10px;
+    column-gap: 10px;
     justify-content: flex-start;
 }
 
@@ -24,8 +24,13 @@
 
 .item2 {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 5;
     background-color: aliceblue;
+}
+
+.item3{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .item4 {
@@ -35,8 +40,8 @@
 }
 
 .item5{
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 
 .item8 {
@@ -46,7 +51,7 @@
 }
 
 header{
-    min-height:200px;
+    min-height:170px;
     font-size: 24px;
     border-bottom: 4px solid rgb(255, 231, 110);
     background-color: rgb(52, 52, 52);
@@ -81,7 +86,7 @@ bio{
 
 ed{
     grid-area: scl;
-    border-bottom: 2 px solid crimson;
+    border-bottom: 2px solid crimson;
     justify-content: right;
 }
 
