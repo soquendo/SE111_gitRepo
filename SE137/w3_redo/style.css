@@ -5,28 +5,51 @@
 }
 
 .grid-container{
-    display: grid;
-    grid-template-areas: 
+    display: inline-grid;
+    /*grid-template-areas: 
         'hdr hdr hdr hdr hdr'
         'bio bio bio bio bio'
         'bio bio bio bio bio'
         'hby hby hby scl scl'
-        'ftr ftr ftr ftr ftr';
+        'ftr ftr ftr ftr ftr';*/
     row-gap: 5px;
     column-gap: 5px;
-    grid-template-columns: 20% 20% 20% 20% 20%;
     justify-content: flex-start;
 }
 
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.item2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: aliceblue;
+}
+
+.item4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: aliceblue;
+}
+
+.item5{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item8 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color:dimgray;
+}
+
 header{
-    grid-area: hdr;
     min-height:200px;
-    display: flexbox;
     font-size: 24px;
     border-bottom: 4px solid rgb(255, 231, 110);
     background-color: rgb(52, 52, 52);
-    float: bottom;
-
 }
 
 #icons{
@@ -53,7 +76,6 @@ h2{
 
 bio{
     
-    grid-area: bio;
     display: flex;
 }
 
@@ -64,9 +86,12 @@ ed{
 }
 
 hobbies{
+    background-color: beige;
     display: flex;
     grid-area: hby;
     border-bottom: #BB0908;
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 
 footer{
