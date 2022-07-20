@@ -4,36 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Week 1">
+    <meta name="author" content="Sebastian Oquendo">
+    <title>SE251 | W1</title>
 </head>
 <body>
-    <script>
 
-        
-
-        fetch('https://www.fishwatch.gov/api/species')
-        .then(function(response){return response.json()})
-        .then(function(data){
-
-            console.log(data)
-            var body = document.querySelector(`body`);
-            var msg = ``;
-
-            
-            //for(let i=0; i<data.length; i++)//
-            for(index in data[1])
-            {
-                if(data[1][index] != null && typeof data[1][index] == `string`)
-                msg += `${data[1][index]}<br>`
-            }
-
-            //msg += `<img src="${data[1][`Species Illustration Photo`][`src`]}">`
-
-            body.innerHTML = msg;
-
-        });
-        
-
+    <script type="text/javascript">
+        alert("Hello world!");
     </script>
     
 </body>
