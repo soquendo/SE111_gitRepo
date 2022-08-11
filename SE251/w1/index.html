@@ -30,18 +30,45 @@
 
         console.log("5 + 6 = ", add(5, 6));
 
-//------------------------------------------//
+//------------------------------------------
+
+        /*var Array = [];
+        for (var i = 1; i <= 100; i++)
+        {
+            Array.push(i);
+        }
+        console.log(Array)*/
+
+
+//-----------------------------------------//
 
         var Array = [];
         for (var i = 1; i <= 100; i++)
         {
             Array.push(i);
+            if(i % 2 == 0)
+            {
+                Array[i] = "fizz"
+            }
+            if(i % 3 == 0)
+            {
+                Array[i] = "buzz"
+            }
+            else if(i % 2 == 0 && i % 3 == 0)
+            {
+                Array[i] = "fizzbuzz"
+            }
+        
         }
         console.log(Array)
 
-
-//-----------------------------------------//
-
+        /*function fizz (i)
+        {
+            if(i % 2 == 0)
+            {
+                this.value = `fizz`
+            }
+        }*/
 
 
     </script>
