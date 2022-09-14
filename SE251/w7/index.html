@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w7 notes</title>
+</head>
+<body>
+    <!-- <form method="POST" action="https://se251-node.herokuapp.com/w6">
+        <input type="text" placeholder="first" value="PeeWee">
+        <input type="text" placeholder="last" value="Herman">
+        <input type="email" placeholder="email" value="peewee@herman.com">
+
+         <input type="submit" value="Submit"> -- limited by browser 
+        <button type="submit">Submit</button>
+    </form> -->
+
+
+    <script src="jquery link"></script>
+
+    <script>
+        /*fetch('https://')
+        .then(res=>res.json()) //returns promise
+        .then((data)=>{
+            console.log(data)
+        })*/
+
+        async function getStuff()
+        {
+            var call = fetch('https');
+
+            var x = await call; //x becomes the resolve of the promise
+
+            var y = await x.json();
+
+        }
+
+        getStuff();
+
+    </script>
+
+    <script>
+        //callback function
+        function add(_a=0, _b=0, _func)
+        {
+            var c = _a + _b;
+
+            _func(c)
+        }
+
+        add(5,5,console.log)
+
+    </script>
+
+
+
+</body>
+</html>

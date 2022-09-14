@@ -25,14 +25,26 @@
 	
 	var body = document.querySelector(`body`)
 	
-	for(i=0. i < people.length, i++)
+	for(i=0; i < people.length; i++){
 
-		var tempDiv = document.createElement("div");
-		body.appendChild(tempDiv).setAttribute("id", "class", "border", String(i));
+		var tempDiv = document.createElement(`div`);
+		body.appendChild(tempDiv);
+		tempDiv.setAttribute(`id`, String(i));
+		tempDiv.setAttribute(`class`, `border`);
 
-		var p = document.createElement("p")
+		for(index in people[i]){
+		
+		
 
-		for( )
+			var tempP = document.createElement(`p`);
+			var newText = document.createTextNode(`${people[i][index]}`);
+
+			tempP.appendChild(newText);
+			tempDiv.appendChild(tempP);
+			console.log(tempP)
+		}
+	}
+
 
 </script>
 
