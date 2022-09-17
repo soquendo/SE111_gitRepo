@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color:red;
+            
+        }
+        .black{
+            color:black;
+        }
+
+        span{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+   
+
+    <form>
+        <div id="person" >
+             <input type="text" placeholder="name"><span>* Please type a number from 1-9</span>
+        </div>
+        <br>
+        <div id="category" >
+            <!--<input type="text" placeholder="planets, starships or people"><span>*Please planets, starships or people</span>-->
+            <input type="radio" name="cat" value="people">
+            <input type="radio" name="cat" value="starships" checked>
+            <input type="radio" name="cat" value="planets">
+        </div>
+        <br>
+        <input type="button" value="Submit">
+    </form>
+
+    <h2 id="game-title">Title goes here</h2>
+    <div id="output">
+        
+    </div>
+
+    <script>
+        
+       
+    var button = document.querySelector(`input[type="button"]`)
+    var output = document.querySelector(`#output`)
+    var title = document.querySelector(`#game-title`)
+
+    var inputs = document.querySelectorAll(`input[type="text"`)
+    var spans =  document.querySelectorAll(`span`)
+
+    var planets = document.querySelector(`input[type="radio"]`)
+
+    var errorMessage = [
+
+    ]
+    
+    /*var inputs[i] = document.querySelector(`#person input`);
+    var spans[i] = document.querySelector(`#person span`);
+
+    var catInput = document.querySelector(`#category input`);
+    var catSpan = document.querySelector(`#category span`);*/
+    
+
+    button.addEventListener(`click`, function(e)
+    {
+        for(let i=0; i<inputs.length;i++)
+        {
+            if(inputs[i].value === ``)
+            {
+                inputs[i].style.backgroundColor = `red`;
+                //spans[i].innerHTML = `${spans[i].dataset.error}`\
+                spans[i].style.display = "inline"
+                spans[i].classList.add(`red`)
+            }
+            else
+            {
+                inputs[i].style.backgroundColor = `white`;
+                //spans[i].innerHTML = ``
+                spans[i].style.display = "none"
+                spans[i].classList.remove(`red`)  
+            }
+        }
+
+        if(inputs[0].value !== "" && planets.value !== "")
+        {
+            var pVal;
+
+            for(let i=0; i<planets.lenght; i++)
+            {
+                if(planets[i].checked)
+                {
+                    pVal = planets[i].value;
+                }
+            }
+
+            try
+            {
+                fetch(`https://swapi.dev/api/${planets.value}/${inputs[0].value}/`)
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data)
+                    output.innerHTML = ""
+                    var tags = ""
+                        tags += `<div>`
+                        switch(planets.value)
+                        {
+                            case "people":
+                                tags += `<p>Gender: ${data.gender}</p>`
+                            break;
+
+                            case "starships":
+                                tags += `<p>Crew: ${data.crew}</p>`
+                            break
+
+                            case "planets":
+                                tags += `<p>Population: ${data.population}</p>`
+                            break
+                        }
+                        tags += `</div>`
+                    output.innerHTML += tags;
+                    title.innerHTML = data.name
+                })
+            }
+            catch
+            {
+                title.innerHTML = "Nothing there"
+            }
+        }
+
+    })
+ /**/
+    
+      /* var links = document.querySelectorAll(`a`);
+       var title = document.querySelector(`h2`);
+       var body = document.querySelector(`#output`);
+           
+
+       links[0].addEventListener(`click`, function(e){
+             ;
+       })*/
+       
+   
+
+      
+       
+               
+        
+           
+            
+            
+       
+      
+
+        //putting the stuff on the page
+        /*var body = document.querySelector(`#output`);
+        var tags = ""
+
+        for(let i=0; i < arr.length; i++)
+        {
+            tags += `<div>`
+            tags += `<p><a href="#" class="game-links">${arr[i].title}</a></p>`
+            tags += `</div>`
+        }
+        
+        body.innerHTML += tags;
+
+        //Making it clickable
+
+        var title = document.querySelector(`#game-title`);
+        var gl = document.querySelectorAll(`.game-links`);
+
+        for(let i=0; i < gl.length; i++)
+        {
+            gl[i].addEventListener("click", selectReview)
+        }
+
+        function selectReview(e)
+        {
+            e.preventDefault()
+            title.innerHTML = this.innerHTML
+          
+        }*/
+
+
+
+    </script>
+</body>
+</html>
