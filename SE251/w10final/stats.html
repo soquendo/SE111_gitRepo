@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+        }
+        h2{
+            border-bottom:1px solid black;
+        }
+        .pokemon{
+            box-sizing: border-box;
+            padding:10px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <main>
+        
+    </main>
+    <script>
+        /*---Instructions-----
+
+            Description: You will use AJAX to get information about two pokemon and display it on the page. 
+
+            Step 1: 
+                1. Look at the API at https://pokeapi.co/
+                2. Figure out how to get a list of the first two pokemon
+                3. Fetch the list in this program.
+                4. Log the returned object in the console.
+            
+            Step 2:
+                 Once you have the data:
+                 1. Fetch the specifics for each pokemon. 
+                 NOTE: this should be done using variables. No data should be hard coded.
+                 HINT: The URL values are in the returned object's results Array.
+                 2. Log the new object's in the console
+
+            Step 3: 
+                Once you get a pokemons data display the following on the page:
+                1.In a heading one display: 
+                    a. It's name
+                    b. The pokemon's default front sprite.
+                2.height in a paragraph
+                3.weight in a paragraph
+                9.Within a paragraph display the name the third game in the pokemon's game indices list.
+                4.<h2>Abilities</h2>
+                    5.an unordered list of its abilities
+                6.<h2>Types</h2>
+                    7.an unordered list of its types
+                8.Within a paragraph display 
+            --------------*/
+
+        //output = document.querySelector(`#output`)
+
+    fetch('https://pokeapi.co/api/v2/pokemon/')
+        .then(res => res.json())
+        .then(data => console.log(data))
+    {
+        var str = ``
+        pokeArray = []
+
+        //var bulba = document.querySelector(data[0].name)
+        //var bulbaURL = document.querySelector(data[0].url)
+
+        //var venu = document.querySelector(data[1].name)
+        //var venuURL = document.querySelector(data[1].url)
+
+        let bulba = fetch('https://pokeapi.co/api/v2/pokemon/1/')
+        .then(res => res.json())
+        .then(data => console.log(data))
+        {
+    
+        }
+
+        let venu = fetch('https://pokeapi.co/api/v2/pokemon/2/')
+        .then(res => res.json())
+        .then(data => console.log(data))
+        {
+
+        }
+
+        //console.log(venu)
+        //console.log(bulba)
+
+
+    }
+
+
+    </script>
+
+
+    <p>
+        <h1> id="1" </h1>
+            <img id='pokeImage'  src=''>
+            <p>Height: </p>
+            <p>Weight: </p>
+            <p>Game: </p>
+
+        <h2><ul>Abilities: </ul></h2>
+
+        <h2><ul>Types: </ul></h2>
+
+    </p>
+
+
+</body>
+</html>
+
+<script>
+
+
+
+
+</script>
