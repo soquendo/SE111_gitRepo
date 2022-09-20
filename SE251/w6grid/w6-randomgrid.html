@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w6 grid</title>
+</head>
+<body>
+
+    
+    <input id="num" type="text" value="" id="num"/>
+    <input type="button" value="Generate Grid" onclick="btn()" />
+    
+    <table >
+        <tbody id="grid" > </tbody>
+    </table>
+
+    <div id="avg"></div>
+
+    <script>
+
+        function randNum (min, max) 
+        {
+            // random * (max num - min  numb + 1) + min = results
+            return Math.floor (Math.random() * (max - min + 1)) + min
+        }
+
+        function btn()
+        {
+            var totalAvg = 0
+            var str = ''
+
+            var avg = 0
+            var rand = 0
+
+            num = parseInt(document.getElementById("num").value)
+
+            //rows
+            for (var i = 0; i < num; i++)
+            {
+                str += "<tr>"
+                
+                //columns
+                for (var index = 0; index < num; index++)
+                {
+                    rand = randNum(1, 100)
+                    avg += rand
+                    str += "<th style='border: 2px solid; padding: 5px;"
+
+                    // multiples of 3
+                    if (rand % 3 == 0)
+                    {
+                        str += "background-color: red"
+                    }
+                    // mult of 2
+                    if (rand % 2 == 0)
+                    {
+                        str += "background-color: blue"
+                    }
+
+                    str += "'> " + rand + " </th>";
+                }
+                str += "</tr>"
+                
+                totalAvg = avg/(num*num)
+            }
+            document.querySelector('#grid').innerHTML = str;
+
+            if(totalAvg == 0)
+            {
+                document.querySelector(`#avg`).innerHTML = "Please enter a number"      
+            }
+            else
+            {
+                document.querySelector('#avg').innerHTML = "<p>The average is " + totalAvg + "</p>"                
+            }
+            console.log(str)
+        }
+    </script>
+</body>
+</html>
