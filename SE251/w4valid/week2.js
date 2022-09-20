@@ -1,9 +1,5 @@
 // JavaScript Document
 
-
-
-
-
 function e()
 {
     var fName = document.querySelector(`#first-name`)
@@ -12,6 +8,8 @@ function e()
     var emailCon = document.querySelector(`#emailConfirm`)
     var phone = document.querySelector(`#phone`)
     var inputs = document.querySelectorAll(`input[type="text"]`)
+    var tel = document.querySelectorAll(`input[type="tel"]`)
+    var emailType = document.querySelectorAll(`input[type="email"]`)
     var p = document.querySelectorAll(`p`)
     var spans =  document.querySelectorAll(`span`)
     //var button = document.querySelector(`input[type="button"]`)
@@ -63,16 +61,6 @@ function e()
             
         }
 
-        //console.log(inputs[0].value)
-
-
+        console.log(inputs[0].value)
     }
-
-    
-
-    //document.querySelector(`#info`).innerText = `${inputs[0].value}${inputs[1].value}\n${inputs[2].value}\n${inputs[4].value}`
- 
- 
-    
-
 }
