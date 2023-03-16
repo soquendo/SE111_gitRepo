@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Final</title>
+    <style>
+        body{
+            display:flex;
+            height:100%;
+            justify-content: center;
+            align-items: center;
+        }
+        main
+        {
+            width:300px;
+           
+        }
+        nav
+        {
+            display:flex;
+            flex-direction: column;
+        }
+        section
+        {
+            border:5px solid black;
+        }
+        #output
+        {
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--Run the page to see the instructions-->
+
+    <main>
+        <section>
+        <div id="output">
+            <p><b>Make: </b>?</p>
+            <p><b>Model: </b>?</p>
+            <p><b>Year: </b>?</p>
+        </div>
+        <nav>
+            <button type="btn" id="jeepBtn" data-url="https://se251-node.herokuapp.com/jeep">Jeep</button>
+            <button type="btn" id="broncoBtn" data-url="https://se251-node.herokuapp.com/bronco">Bronco</button>
+            <button type="btn" id="roverBtn" data-url="https://se251-node.herokuapp.com/lc">Land Cruiser</button>
+        </nav>
+    </section>
+       <div id="instructions">
+            <h2>Instructions</h2>
+            <p>
+                When you click a button with the name of the car 
+                1. make an ajax call that will grab the car's data from the specified URL
+                2. Display the returned object in the console.
+                2. Then display the Make, Model and Year in the output div.
+                
+            </p>
+            <h3>The output should look like this:</h3>
+            <p><b>Make: </b>Ford</p>
+            <p><b>Model: </b>Mustang</p>
+            <p><b>Year: </b>2022</p>
+
+            <!--------------------------------------------
+            AJAX URL's
+            ----------------------------------------------
+              https://se251-node.herokuapp.com/jeep
+              https://se251-node.herokuapp.com/bronco
+              https://se251-node.herokuapp.com/lc
+           ----------------------------------------------->
+       </div>
+    </main>
+
+
+</body>
+</html>
+
+<script>
+
+
+
+    btn[0].addEventListener(`click`, showCar);
+
+    function showCar(e)
+    {
+        
+    }
+    
+
+
+</script>

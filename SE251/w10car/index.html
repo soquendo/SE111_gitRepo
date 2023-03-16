@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Program Final</title>
+    <style>
+        body{
+            display:flex;
+            height:100%;
+            justify-content: center;
+            align-items: center;
+            background-color:black;
+        }
+        canvas{
+            background-color:#333;
+            display:block;
+        }
+       button{
+        display:inline-block;
+        margin-bottom:20px;
+       }
+    </style>
+</head>
+<body>
+    <main>
+        <button>Start</button>
+        <button>Stop</button>
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </main>
+    <!--INSTRUCTIONS
+        Description: create an HTML5 canvas application that does the following:
+        1. Using the existing code, create a second box object.
+        2. Each box should have: 
+            a. different horizontal velocities (vx).
+            b. a unique color. 
+            c. different y coordinate.
+        3. Draw the second box on the screen
+        4. When the user presses start:
+            a. `START` will show up in the console.
+            b.  the two boxes will move across the screen to the right.
+            HINT: they're horizontal velocity should control whether or not they will move.
+        5. When a box leaves the right side of the screen:
+            a. the box will appear on the left side and continue to move.
+            b. the total number of loops for all boxes will be displayed on the canvas.
+        6. When the user presses stop:
+            a. the boxes will stop moving.
+            b. `STOP` will appear in the console.
+    
+    -->
+    
+
+    <script>
+        var c=document.querySelector(`canvas`)
+        var ctx = c.getContext(`2d`)
+        //----1/60 of a second or 60 Frames per second-----
+        var fps = 1000/60
+        var numOfLoops = "You must figure this part out for the number of loops"
+        
+
+        //Array of box objects, with one example box. Add the second box to the array
+        var boxes=
+        [
+            {
+                x:100,
+                y:100,
+                w:100,
+                h:100,
+                color:`red`,
+                vx:7,
+                vy:0
+            },
+
+            {
+                
+            }
+        ]
+
+        /*for(let i=0; i<numOfLoops; i++)
+        {
+            box2[i] = new GameObject();
+            box2[i] = 
+        }*/
+
+
+        var timer = setInterval(main,fps)
+        function main()
+        {
+            ctx.clearRect(0,0,c.width,c.height);
+
+            boxes[0].x += boxes[0].vx;
+
+            ctx.save();
+                ctx.fillStyle=boxes[0].color;
+                ctx.fillRect(boxes[0].x, boxes[0].y, boxes[0].w, boxes[0].h)
+            ctx.restore();
+
+            ctx.save();
+                ctx.textAlign=`center`
+                ctx.fillStyle=`black`
+                ctx.font =`bold 32px Arial`
+                ctx.fillText(numOfLoops, c.width/2, 50);
+            ctx.restore();
+        }
+
+        function rand(_low,_high)
+        {
+            return Math.random()*(_high-_low) + _low
+        }
+    </script>
+    <script src="GameObject.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

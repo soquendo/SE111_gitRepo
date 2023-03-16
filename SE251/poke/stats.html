@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+        }
+        h2{
+            border-bottom:1px solid black;
+        }
+        .pokemon{
+            box-sizing: border-box;
+            padding:10px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        
+    </main>
+    <script>
+        /*---Instructions-----
+
+            Description: You will use AJAX to get information about two pokemon and display it on the page. 
+
+            Step 1: 
+                1. Look at the API at https://pokeapi.co/
+                2. Figure out how to get a list of the first two pokemon
+                3. Fetch the list in this program.
+                4. Log the returned object in the console.
+            
+            Step 2:
+                 Once you have the data:
+                 1. Fetch the specifics for each pokemon. 
+                 NOTE: this should be done using variables. No data should be hard coded.
+                 HINT: The URL values are in the returned object's results Array.
+                 2. Log the new object's in the console
+
+            Step 3: 
+                Once you get a pokemons data display the following on the page:
+                1.In a heading one display: 
+                    a. It's name
+                    b. The pokemon's default front sprite.
+                2.height in a paragraph
+                3.weight in a paragraph
+                9.Within a paragraph display the name the third game in the pokemon's game indices list.
+                4.<h2>Abilities</h2>
+                    5.an unordered list of its abilities
+                6.<h2>Types</h2>
+                    7.an unordered list of its types
+                8.Within a paragraph display 
+            --------------*/
+        
+        fetch('https://pokeapi.co/api/v2/pokemon/')
+		.then(function(response){return response.json()})
+        .then(function(pokemon)
+		{
+            console.log(pokemon)
+            fetch(pokemon["results"][0]["url"])
+            .then(function(response){return response.json()})
+            .then(function(bulbasaur)
+            {
+                console.log(bulbasaur)
+
+                var strAbil = ""
+                var strType = ""
+
+                for (i = 0; i < bulbasaur["abilities"].length; i++)
+                {
+                    strAbil += "<li>" + bulbasaur["abilities"][i]["ability"]["name"] + "</li>"
+                }
+
+                for (i = 0; i < bulbasaur["types"].length; i++)
+                {
+                    strType += "<li>" + bulbasaur["types"][i]["type"]["name"] + "</li>"
+                }
+                
+                document.body.innerHTML += "<div>" + 
+                "<h1>" + bulbasaur["name"] + "</h1>" +
+                "<img src='"+ bulbasaur["sprites"]["back_default"] +"'>"  +
+                "<p>Height: " + bulbasaur["height"] + "</p>" +
+                "<p>weight: " + bulbasaur["weight"] + "</p>" +
+                "<p>3rd Game: " + bulbasaur["game_indices"][2]["version"]["name"] + "</p>" +
+                "<h2>Abilities</h2>" +
+                "<ul>" + strAbil + "</ul>" +
+                "<h2>Types</h2>" +
+                "<ul>" + strType + "</ul>" +
+                "</div>"
+            })
+
+            fetch(pokemon["results"][1]["url"])
+            .then(function(response){return response.json()})
+            .then(function(ivysaur)
+            {
+                console.log(ivysaur)
+
+                var strAbil = ""
+                var strType = ""
+
+                for (i = 0; i < ivysaur["abilities"].length; i++)
+                {
+                    strAbil += "<li>" + ivysaur["abilities"][i]["ability"]["name"] + "</li>"
+                }
+
+                for (i = 0; i < ivysaur["types"].length; i++)
+                {
+                    strType += "<li>" + ivysaur["types"][i]["type"]["name"] + "</li>"
+                }
+                
+                document.body.innerHTML += "<div>" + 
+                "<h1>" + ivysaur["name"] + "</h1>" +
+                "<img src='"+ ivysaur["sprites"]["back_default"] +"'>"  +
+                "<p>Height: " + ivysaur["height"] + "</p>" +
+                "<p>weight: " + ivysaur["weight"] + "</p>" +
+                "<p>3rd Game: " + ivysaur["game_indices"][2]["version"]["name"] + "</p>" +
+                "<h2>Abilities</h2>" + 
+                "<ul>" + strAbil + "</ul>" +
+                "<h2>Types</h2>" +
+                "<ul>" + strType + "</ul>" +
+                "</div>"
+                
+            })
+		})
+    </script>
+</body>
+</html>
